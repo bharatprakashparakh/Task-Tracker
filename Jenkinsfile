@@ -5,9 +5,9 @@ pipeline {
         nodejs 'NodeJS 21.1'  // Ensure Node.js v14 is used (make sure this version is installed in Jenkins)
     }
 
-    // environment {
-    //     NODE_OPTIONS = '--openssl-legacy-provider'  // To avoid OpenSSL-related issues in newer versions of Node.js
-    // }
+    environment {
+        NODE_OPTIONS = '--openssl-legacy-provider'  // To avoid OpenSSL-related issues in newer versions of Node.js
+    }
 
     stages {
         stage('Checkout') {
